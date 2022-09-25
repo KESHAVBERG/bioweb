@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import AppBarComponet from "./componets/AppBar";
+import Home from "./componets/Home";
+import React from 'react'
+import AppBar from '@mui/material/AppBar';
+import { Box, Typography, IconButton } from '@mui/material';
+// import { styled, alpha } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
+import { Toolbar } from '@mui/material';
+import TextField from '@mui/material/TextField';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBarComponet />
+      
+      <Home />
     </div>
   );
 }
