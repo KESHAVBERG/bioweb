@@ -10,7 +10,7 @@ import MRI from '../assests/MRI.jpg';
 import oosi from '../assests/oosi.jpg';
 import thermography from '../assests/thermography.jpg'
 import ultrasound from '../assests/ultrasound.jpg'
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import '../css/homestyle.css'
 
@@ -35,7 +35,7 @@ const Home = () => {
                     </CardContent>
                     <CardActions>
                         {/* <Button>Select</Button> */}
-                        <Link to="/xray">Select</Link>
+                        <Link to="/xray" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -57,7 +57,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Link to="/ct">Select</Link>
+                        <Link to="/ct" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -78,7 +78,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Link to="/mri">Select</Link>
+                        <Link to="/mri" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -100,7 +100,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Link to="/ossi">Select</Link>
+                        <Link to="/ossi" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -122,14 +122,14 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Link to="/thermograhy">Select</Link>
+                        <Link to="/thermograhy" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
 
-                {/* ------------------------ */}
+            {/* ------------------------ */}
 
-                <Grid item xs={4} sm={4} md={4}>
+            <Grid item xs={4} sm={4} md={4}>
                 <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
@@ -145,7 +145,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                    <Link to="/ultrasound">Select</Link>
+                        <Link to="/ultrasound" className='link'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>

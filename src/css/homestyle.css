@@ -1,3 +1,5 @@
-Link{
-    color: wheat;
+.link{
+    color: rgb(6, 121, 228);
+    text-transform: uppercase;
+    text-decoration: none;
 }
