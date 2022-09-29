@@ -1,22 +1,22 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
-
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import xray from '../assests/xray.jpg';
 import CT from '../assests/CT.jpg';
 import MRI from '../assests/MRI.jpg';
 import oosi from '../assests/oosi.jpg';
 import thermography from '../assests/thermography.jpg'
+import ultrasound from '../assests/ultrasound.jpg'
+import {Link } from "react-router-dom";
 
-import { bgcolor } from '@mui/system';
+import '../css/homestyle.css'
 
 const Home = () => {
     return (
-        <Grid sx={{ bgColor: "black", alignItems:"center"}} spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
+        <Grid sx={{ bgColor: "black", alignItems: "center" }} spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
             <Grid item xs={4} sm={4} md={4}>
                 <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
@@ -34,7 +34,8 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Select</Button>
+                        {/* <Button>Select</Button> */}
+                        <Link to="/xray">Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -56,7 +57,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Select</Button>
+                    <Link to="/ct">Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -77,7 +78,7 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Select</Button>
+                    <Link to="/mri">Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
@@ -92,20 +93,20 @@ const Home = () => {
                     />
                     <CardContent sx={{ color: "white" }}>
                         <Typography gutterBottom variant="h5" component="div">
-                            MRI
+                            Ossi
                         </Typography>
                         <Typography variant="body2">
                             Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Select</Button>
+                    <Link to="/ossi">Select</Link>
                     </CardActions>
                 </Card>
             </Grid>
-                  {/* ------------------------ */}
+            {/* ------------------------ */}
 
-                  <Grid item xs={4} sm={4} md={4}>
+            <Grid item xs={4} sm={4} md={4}>
                 <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
@@ -114,14 +115,37 @@ const Home = () => {
                     />
                     <CardContent sx={{ color: "white" }}>
                         <Typography gutterBottom variant="h5" component="div">
-                            MRI
+                            Thermography
                         </Typography>
                         <Typography variant="body2">
                             Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button>Select</Button>
+                    <Link to="/thermograhy">Select</Link>
+                    </CardActions>
+                </Card>
+            </Grid>
+
+                {/* ------------------------ */}
+
+                <Grid item xs={4} sm={4} md={4}>
+                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                    <CardMedia
+                        component="img"
+                        height={140}
+                        image={ultrasound}
+                    />
+                    <CardContent sx={{ color: "white" }}>
+                        <Typography gutterBottom variant="h5" component="div">
+                            UltroSound
+                        </Typography>
+                        <Typography variant="body2">
+                            Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                    <Link to="/ultrasound">Select</Link>
                     </CardActions>
                 </Card>
             </Grid>

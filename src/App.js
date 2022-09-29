@@ -1,18 +1,41 @@
 import AppBarComponet from "./componets/AppBar";
 import Home from "./componets/Home";
 import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import { Box, Typography, IconButton } from '@mui/material';
 // import { styled, alpha } from '@mui/material/styles';
-import SearchIcon from '@mui/icons-material/Search';
-import { Toolbar } from '@mui/material';
-import TextField from '@mui/material/TextField';
+import CtScan from './componets/CtScan.jsx'
+import MriScan from './componets/CtScan.jsx'
+import Ossi from './componets/Ossi.jsx'
+import Thermography from "./componets/Thermography.jsx";
+import Ulrasound from './componets/Ulrasound.jsx'
+import Xray from './componets/Xray.jsx'
+
+// Routes import
+
+import {
+  BrowserRouter,
+  Routes, 
+  Route,
+  Router,
+} from "react-router-dom";
+
+
 function App() {
   return (
     <div className="App">
-      <AppBarComponet />
-      
-      <Home />
+        <BrowserRouter>
+        <AppBarComponet />
+
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/xray" element={<Xray />}/>
+          <Route path="/ct" element={<CtScan />}/>
+          <Route path="/mri" element={<MriScan />}/>
+          <Route path="/oosi" element={<Ossi />}/>
+          <Route path="/thermograhy" element={<Thermography />}/>
+          <Route path="/ultrasound" element={<Ulrasound />}/>
+
+        </Routes>
+        </BrowserRouter>
     </div>
   );
 }
