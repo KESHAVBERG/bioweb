@@ -1,17 +1,25 @@
 import React from 'react'
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Divider from '@mui/material/Divider';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+
 
 import ListItemConponent from './ListItemConponent'
+
 const Xray = () => {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-     <ListItemConponent /> 
+    <List sx={{ width: '100%', bgcolor: 'grey', mr: 3 }}>
+      <Card sx={{ mb: 2 }}>
+        <ListItemConponent Disease="pneumonia" />
+      </Card>
+      <Card sx={{ mb: 2 }}>
+        <ListItemConponent Disease="tuberculosis" />
+      </Card>
+      <Card sx={{ mb: 2 }}>
+        <ListItemConponent Disease="COVID" />
+      </Card>
+      <Card sx={{ mb: 2 }}>
+        <ListItemConponent Disease="knee osteoarthritis- KL grading" />
+      </Card>
     </List>
   )
 }
