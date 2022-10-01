@@ -3,12 +3,11 @@ import Home from "./componets/Home";
 import React from 'react'
 // import { styled, alpha } from '@mui/material/styles';
 import CtScan from './componets/CtScan.jsx'
-import MriScan from './componets/CtScan.jsx'
-import Ossi from './componets/Ossi.jsx'
+import MriScan from './componets/MriScan'
 import Thermography from "./componets/Thermography.jsx";
 import Ulrasound from './componets/Ulrasound.jsx'
 import Xray from './componets/Xray.jsx'
-
+import Ossi from "./componets/Ossi";
 // Routes import
 
 import {
@@ -30,7 +29,7 @@ function App() {
           <Route path="/xray" element={<Xray />}/>
           <Route path="/ct" element={<CtScan />}/>
           <Route path="/mri" element={<MriScan />}/>
-          <Route path="/oosi" element={<Ossi />}/>
+          <Route path="/ossi" element={<Ossi />}/>
           <Route path="/thermograhy" element={<Thermography />}/>
           <Route path="/ultrasound" element={<Ulrasound />}/>
 
