@@ -3,6 +3,8 @@ import List from '@mui/material/List';
 import Card from '@mui/material/Card';
 import ListItemConponent from './ListItemConponent'
 
+import { Link } from "react-router-dom";
+
 const MriScan = () => {
   return (
     <List sx={{ width: '100%', bgcolor: 'grey', mr: 3 }}>
@@ -12,9 +14,11 @@ const MriScan = () => {
       <Card sx={{ mb: 2 }}>
         <ListItemConponent Disease="brain tumor advanced- location based" />
       </Card>
-      <Card sx={{ mb: 2 }}>
-        <ListItemConponent Disease="oral cancer" />
-      </Card>
+      <Link to='/mri/oralcancer' className='link'>
+        <Card sx={{ mb: 2 }}>
+          <ListItemConponent Disease="oral cancer" />
+        </Card>
+      </Link>
       <Card sx={{ mb: 2 }}>
         <ListItemConponent Disease="breast cancer chemo treatment response" />
       </Card>

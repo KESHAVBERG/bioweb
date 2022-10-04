@@ -17,14 +17,14 @@ import {
   Route,
   Router,
 } from "react-router-dom";
+import OralCancer from "./componets/tests/OralCancer";
 
 
 function App() {
 
   useEffect(()=>{
     const fetchmodels = async()=>{
-      const models = await fetch("http://127.0.0.1:5000/models").then(respnse=>{console.log(respnse)});
-
+      const models = await fetch("http://127.0.0.1:5000/models").then((respnse)=>respnse.json()).then((actualData)=> console.log(actualData));
     }
 
     fetchmodels();
@@ -44,7 +44,7 @@ function App() {
           <Route path="/ossi" element={<Ossi />}/>
           <Route path="/thermograhy" element={<Thermography />}/>
           <Route path="/ultrasound" element={<Ulrasound />}/>
-
+          <Route path="/mri/oralcancer" element={<OralCancer/>}/>
         </Routes>
         </BrowserRouter>
     </div>
