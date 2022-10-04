@@ -1,6 +1,7 @@
 import AppBarComponet from "./componets/AppBar";
 import Home from "./componets/Home";
 import React from 'react'
+import { useEffect } from "react";
 // import { styled, alpha } from '@mui/material/styles';
 import CtScan from './componets/CtScan.jsx'
 import MriScan from './componets/MriScan'
@@ -19,6 +20,17 @@ import {
 
 
 function App() {
+
+  useEffect(()=>{
+    const fetchmodels = async()=>{
+      const models = await fetch("http://127.0.0.1:5000/models").then(respnse=>{console.log(respnse)});
+
+    }
+
+    fetchmodels();
+  
+  },[]);
+
   return (
     <div className="App">
         <BrowserRouter>

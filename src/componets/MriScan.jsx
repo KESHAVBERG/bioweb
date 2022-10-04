@@ -13,7 +13,7 @@ const MriScan = () => {
         <ListItemConponent Disease="brain tumor advanced- location based" />
       </Card>
       <Card sx={{ mb: 2 }}>
-        <ListItemConponent Disease="breast cancer" />
+        <ListItemConponent Disease="oral cancer" />
       </Card>
       <Card sx={{ mb: 2 }}>
         <ListItemConponent Disease="breast cancer chemo treatment response" />
