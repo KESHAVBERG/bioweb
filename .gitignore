@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# https://openbase.com/js/react-image-picker
+# https://dev.to/cole_ruche/placeholder-2chb
+
 # dependencies
 /node_modules
 /.pnp
