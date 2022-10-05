@@ -2,19 +2,32 @@ import React, { useState } from 'react'
 import { Stack, Typography, Button } from '@mui/material';
 
 const OralCancer = () => {
-  const [state, setState] = useState({ image: " " });
+  const [state, setState] = useState({image:""});
 
   function handleImageChange(e) {
     setState({
       image: e.target.files[0]
     })
-
-    console.log(state)
   };
 
   function handelSubmit(e) {
     e.preventDefault();
-    let imgData = new FormData();
+    let form_data = new FormData();
+    console.log(state);
+    form_data.append('image',state);
+    const options = {
+      mode: "no-cors",
+      method:'POST',
+      //   headers: {
+      //   'Content-Type': 'multipart/form-data',
+      // },
+      body: form_data
+    }
+
+    fetch("http://127.0.0.1:5000/predict/oral_cancer",options).then(res => {
+      console.log(res.data);
+    }).catch(e => console.log(e))
+
 
   }
   return (
@@ -25,7 +38,7 @@ const OralCancer = () => {
       <Typography variant='p' sx={{}}>
         Upload you image of Cancer in a .jpg format
       </Typography>
-      <form onSubmit="">
+      <form onSubmit={handelSubmit}>
         <input type="file" className="input-file" name="imgUpload" accept='.jpg' onChange={handleImageChange} />
         <br />
         <br />
