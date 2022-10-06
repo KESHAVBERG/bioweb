@@ -44,7 +44,7 @@ const OralCancer = () => {
 
 
   return (
-    <Stack spacing={2} sx={{ pl: "20px" }}>
+    <Stack spacing={2} sx={{pl:{lg:"130px", xs:"20px"} }}>
       <Typography variant='h4' fontWeight="bold" sx={{}}>
         Oral Cancer
       </Typography>
