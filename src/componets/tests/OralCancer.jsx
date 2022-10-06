@@ -11,6 +11,8 @@ const OralCancer = () => {
     })
   };
 
+  const op = result.result? `${result.result[0]*100}% of chance of cancer`:"";
+
   function handelSubmit(e) {
     e.preventDefault();
     let form_data = new FormData();
@@ -30,7 +32,7 @@ const OralCancer = () => {
       body: form_data
     }
 
-    fetch("http://127.0.0.1:5000/predict/oral_cancer", options).then((res)=>res.json()).then((data)=>{
+    fetch("http://127.0.0.1:5000/predict/oral_cancer", options).then((res) => res.json()).then((data) => {
       setResult(data)
       console.log(result.result)
     }
@@ -56,8 +58,10 @@ const OralCancer = () => {
 
         <input type="submit" style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
       </form>
+      <br />
 
-  <p>{result.result*100}% change of a cancer</p>
+      {op}
+      {/* <p>{result.result * 100}% change of a cancer</p> */}
 
     </Stack>
   )
