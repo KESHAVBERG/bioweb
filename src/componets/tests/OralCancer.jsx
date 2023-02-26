@@ -32,9 +32,9 @@ const OralCancer = () => {
       body: form_data
     }
 
-    fetch("http://127.0.0.1:5000/predict/oral_cancer", options).then((res) => res.json()).then((data) => {
+    fetch("https://farookheroes.pythonanywhere.com/predict/oral_cancer", options).then((res) => res.json()).then((data) => {
       setResult(data)
-      console.log(result.result)
+      console.log(data)
     }
     )
 

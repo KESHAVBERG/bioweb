@@ -24,7 +24,7 @@ function App() {
 
   useEffect(()=>{
     const fetchmodels = async()=>{
-      const models = await fetch("http://127.0.0.1:5000/models").then((respnse)=>respnse.json()).then((actualData)=> console.log(actualData));
+      const models = await fetch("https://farookheroes.pythonanywhere.com/models").then((respnse)=>respnse.json()).then((actualData)=> console.log(actualData));
     }
 
     fetchmodels();
