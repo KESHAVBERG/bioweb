@@ -26,9 +26,7 @@ const OralCancer = () => {
     const options = {
       // mode: "no-cors",
       method: 'POST',
-      //   headers: {
-      //   'Content-Type': 'multipart/form-data',
-      // },
+    
       body: form_data
     }
 

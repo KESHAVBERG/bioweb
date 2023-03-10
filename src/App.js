@@ -34,8 +34,6 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
-        <AppBarComponet />
-
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/xray" element={<Xray />}/>

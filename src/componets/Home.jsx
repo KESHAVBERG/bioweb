@@ -13,10 +13,17 @@ import ultrasound from '../assests/ultrasound.jpg'
 import { Link } from "react-router-dom";
 
 import '../css/homestyle.css'
+import { Box } from '@mui/material';
 
 const Home = () => {
     return (
-        <Grid sx={{ bgColor: "black", alignItems: "center" }} spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
+        <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+      >
+        <Grid sx={{ bgColor: "black", }} spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
             <Grid item xs={4} sm={4} md={4}>
                 <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
@@ -150,6 +157,7 @@ const Home = () => {
                 </Card>
             </Grid>
         </Grid>
+        </Box>
     )
 }
 
