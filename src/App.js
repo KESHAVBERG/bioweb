@@ -18,6 +18,7 @@ import {
   Router,
 } from "react-router-dom";
 import OralCancer from "./componets/tests/OralCancer";
+import CapsuleEndocopyTest from "./componets/tests/CapsuleEndocopyTest";
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
           <Route path="/thermograhy" element={<Thermography />}/>
           <Route path="/ultrasound" element={<Ulrasound />}/>
           <Route path="/mri/oralcancer" element={<OralCancer/>}/>
+          <Route path="/ossi/capsuleendoscopy" element={<CapsuleEndocopyTest/>}/>
+
         </Routes>
         </BrowserRouter>
     </div>
