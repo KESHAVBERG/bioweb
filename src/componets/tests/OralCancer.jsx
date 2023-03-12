@@ -5,10 +5,18 @@ const OralCancer = () => {
   const [state, setState] = useState({ image: "" });
 
   const [result, setResult] = useState([]);
+
   function handleImageChange(e) {
     setState({
       image: e.target.files[0]
-    })
+    });
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+    oFReader.onload = function (oFREvent) {
+        document.getElementById("uploadPreview").src = oFREvent.target.result;
+    };
+
   };
 
   const op = result.result ? `${result.result[0] * 100}% of chance of cancer` : "";
@@ -44,8 +52,8 @@ const OralCancer = () => {
   return (
     <Box height="100vh" width="100vw" alignContent="center" display="flex"
       justifyContent="center"
-      alignItems="center">
-      <Card sx={{p:3}}>
+      alignItems="center" bgcolor="">
+      <Card sx={{ p: 3, bgcolor:"" }}>
         <Stack spacing={2} >
           <Typography variant='h4' fontWeight="bold" sx={{}}>
             Oral Cancer
@@ -54,16 +62,19 @@ const OralCancer = () => {
             Upload you image of Cancer in a .jpg format
           </Typography>
           <form onSubmit={handelSubmit} method="post">
-            <input type="file" className="input-file" name="imgUpload" accept='.jpg' onChange={handleImageChange} />
+            <input type="file" className="input-file" id='uploadImage'
+
+             name="imgUpload" accept='.jpg' onChange={handleImageChange} />
             <br />
             <br />
 
-            <input type="submit" style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
+            <input type="submit"  style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
           </form>
           <br />
 
           {op}
           {/* <p>{result.result * 100}% change of a cancer</p> */}
+          {state.image === ""?<p></p>:<img id="uploadPreview" alt='' style={{height:"300px", width:"300px"}} />}
 
         </Stack>
       </Card>
