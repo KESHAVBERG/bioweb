@@ -15,16 +15,16 @@ const Xray = () => {
   minHeight="100vh"
 >
     <List sx={{ width: '70%', bgcolor: 'grey', mr: 3 }}>
-      <Card sx={{ mb: 2 }}>
+      <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
         <ListItemConponent Disease="pneumonia" />
       </Card>
-      <Card sx={{ mb: 2 }}>
+      <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
         <ListItemConponent Disease="tuberculosis" />
       </Card>
-      <Card sx={{ mb: 2 }}>
+      <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
         <ListItemConponent Disease="COVID" />
       </Card>
-      <Card sx={{ mb: 2 }}>
+      <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
         <ListItemConponent Disease="knee osteoarthritis- KL grading" />
       </Card>
     </List>

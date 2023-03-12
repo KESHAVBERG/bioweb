@@ -22,10 +22,11 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         minHeight="100vh"
+        bgcolor="grey"
       >
-        <Grid sx={{ bgColor: "black", }} spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
+        <Grid sx={{ bgColor: " ", }} spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }} container>
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385, maxHeight:400, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -42,13 +43,13 @@ const Home = () => {
                     </CardContent>
                     <CardActions>
                         {/* <Button>Select</Button> */}
-                        <Link to="/xray" className='link'>Select</Link>
+                        <Link to="/xray" className='link'><Typography className='center'>select</Typography></Link>
                     </CardActions>
                 </Card>
             </Grid>
             {/* CT Grid */}
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385, maxHeight:400,bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -70,7 +71,7 @@ const Home = () => {
             </Grid>
             {/* ------------------------ */}
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385,maxHeight:400, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -92,7 +93,7 @@ const Home = () => {
             {/* ------------------------ */}
 
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385,maxHeight:400, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -114,7 +115,7 @@ const Home = () => {
             {/* ------------------------ */}
 
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385,maxHeight:400, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -137,7 +138,7 @@ const Home = () => {
             {/* ------------------------ */}
 
             <Grid item xs={4} sm={4} md={4}>
-                <Card sx={{ maxWidth: 385, bgcolor: "#3C3C3C", color: "white" }}>
+                <Card sx={{ maxWidth: 385, maxHeight:400, bgcolor: "#3C3C3C", color: "white" }}>
                     <CardMedia
                         component="img"
                         height={140}
@@ -151,8 +152,8 @@ const Home = () => {
                             Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.
                         </Typography>
                     </CardContent>
-                    <CardActions>
-                        <Link to="/ultrasound" className='link'>Select</Link>
+                    <CardActions className='' >
+                        <Link to="/ultrasound" className='link center'>Select</Link>
                     </CardActions>
                 </Card>
             </Grid>

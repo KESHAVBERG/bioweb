@@ -12,16 +12,16 @@ const Ossi = () => {
     minHeight="100vh"
   >
     <List sx={{ width: '70%', bgcolor: 'grey', mr: 3 }}>
-    <Card sx={{ mb: 2 }}>
+    <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
       <ListItemConponent Disease="capsule endoscopy" />
     </Card>
-    <Card sx={{ mb: 2 }}>
+    <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
       <ListItemConponent Disease="OCT" />
     </Card>
-    <Card sx={{ mb: 2 }}>
+    <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
       <ListItemConponent Disease="fundus" />
     </Card>
-    <Card sx={{ mb: 2 }}>
+    <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
       <ListItemConponent Disease="melanoma (microscopic images)" />
     </Card>
   </List> 
