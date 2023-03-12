@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Stack, Typography, Button } from '@mui/material';
+import { Stack, Typography, Button, Box, Card } from '@mui/material';
 
 const OralCancer = () => {
   const [state, setState] = useState({ image: "" });
@@ -11,7 +11,7 @@ const OralCancer = () => {
     })
   };
 
-  const op = result.result? `${result.result[0]*100}% of chance of cancer`:"";
+  const op = result.result ? `${result.result[0] * 100}% of chance of cancer` : "";
 
   function handelSubmit(e) {
     e.preventDefault();
@@ -26,7 +26,7 @@ const OralCancer = () => {
     const options = {
       // mode: "no-cors",
       method: 'POST',
-    
+
       body: form_data
     }
 
@@ -42,26 +42,32 @@ const OralCancer = () => {
 
 
   return (
-    <Stack spacing={2} sx={{pl:{lg:"130px", xs:"20px"} }}>
-      <Typography variant='h4' fontWeight="bold" sx={{}}>
-        Oral Cancer
-      </Typography>
-      <Typography variant='p' sx={{}}>
-        Upload you image of Cancer in a .jpg format
-      </Typography>
-      <form onSubmit={handelSubmit} method="post">
-        <input type="file" className="input-file" name="imgUpload" accept='.jpg' onChange={handleImageChange} />
-        <br />
-        <br />
+    <Box height="100vh" width="100vw" alignContent="center" display="flex"
+      justifyContent="center"
+      alignItems="center">
+      <Card sx={{p:3}}>
+        <Stack spacing={2} >
+          <Typography variant='h4' fontWeight="bold" sx={{}}>
+            Oral Cancer
+          </Typography>
+          <Typography variant='p' sx={{}}>
+            Upload you image of Cancer in a .jpg format
+          </Typography>
+          <form onSubmit={handelSubmit} method="post">
+            <input type="file" className="input-file" name="imgUpload" accept='.jpg' onChange={handleImageChange} />
+            <br />
+            <br />
 
-        <input type="submit" style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
-      </form>
-      <br />
+            <input type="submit" style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
+          </form>
+          <br />
 
-      {op}
-      {/* <p>{result.result * 100}% change of a cancer</p> */}
+          {op}
+          {/* <p>{result.result * 100}% change of a cancer</p> */}
 
-    </Stack>
+        </Stack>
+      </Card>
+    </Box>
   )
 }
 
