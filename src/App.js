@@ -9,6 +9,7 @@ import Thermography from "./componets/Thermography.jsx";
 import Ulrasound from './componets/Ulrasound.jsx'
 import Xray from './componets/Xray.jsx'
 import Ossi from "./componets/Ossi";
+
 // Routes import
 
 import {
@@ -19,6 +20,7 @@ import {
 } from "react-router-dom";
 import OralCancer from "./componets/tests/OralCancer";
 import CapsuleEndocopyTest from "./componets/tests/CapsuleEndocopyTest";
+import Covid from "./componets/tests/Covid.jsx";
 
 
 function App() {
@@ -45,6 +47,10 @@ function App() {
           <Route path="/ultrasound" element={<Ulrasound />}/>
           <Route path="/mri/oralcancer" element={<OralCancer/>}/>
           <Route path="/ossi/capsuleendoscopy" element={<CapsuleEndocopyTest/>}/>
+
+          <Route path="/xray/covid" element={<Covid/>}/>
+
+
 
         </Routes>
         </BrowserRouter>

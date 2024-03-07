@@ -18,10 +18,6 @@ const Thermography = () => {
       <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
         <ListItemConponent Disease="diabetes neuropathy" />
       </Card>
-      <Card sx={{ mb: 2, bgcolor: "#3C3C3C", color: "white" }}>
-        <ListItemConponent Disease="peripheral vascular disorders" />
-      </Card>
-
     </List>
     </Box>
     )
