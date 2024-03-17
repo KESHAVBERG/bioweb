@@ -18,6 +18,7 @@ const OralCancer = () => {
     };
 
   };
+  
 
   const op = result.result ? `${result.result[0] * 100}% of chance of cancer` : "";
 
@@ -27,7 +28,6 @@ const OralCancer = () => {
     var imagedata = document.querySelector('input[type="file"]').files[0];
 
     console.log("submit clicked");
-    console.log(imagedata);
 
     form_data.append('image', imagedata);
     console.log(form_data.get('image'))
@@ -40,7 +40,7 @@ const OralCancer = () => {
 
     fetch("https://farookheroes.pythonanywhere.com/predict/oral_cancer", options).then((res) => res.json()).then((data) => {
       setResult(data)
-      console.log(data)
+      console.log(`THE RESULT ${result}`)
     }
     )
 

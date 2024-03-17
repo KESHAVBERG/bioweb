@@ -4,8 +4,7 @@ import { Stack, Typography, Button, Box, Card } from '@mui/material';
 
 const Covid = () => {
 
-    const [state, setState] = useState({ image: "" });
-
+  const [state, setState] = useState({ image: "" });
   const [result, setResult] = useState([]);
 
   function handleImageChange(e) {
@@ -21,7 +20,8 @@ const Covid = () => {
 
   };
 
-  const op = result.result ? `${result.result[0] * 100}% of chance of cancer` : "";
+  const op = result.result ? result.result[0] * 100:0;
+  const res = op?( op>98?`propbability of a COVID`:`This migh be a pnemonia`):'';
 
   function handelSubmit(e) {
     e.preventDefault();
@@ -62,6 +62,7 @@ const Covid = () => {
                         Upload you image of Cancer in a .jpg format
                     </Typography>
                     <form onSubmit={handelSubmit} method="post">
+
             <input type="file" className="input-file" id='uploadImage'
 
              name="imgUpload" accept='.jpg' onChange={handleImageChange} />
@@ -70,6 +71,8 @@ const Covid = () => {
 
             <input type="submit"  style={{ color: "white", backgroundColor: "#157DEC", width: "150px", height: "30px", border: "none" }} />
           </form>
+          {res}
+          {state.image === ""?<p></p>:<img id="uploadPreview" alt='' style={{height:"300px", width:"300px"}} />}
                 </Stack>
             </Card>
         </Box>
