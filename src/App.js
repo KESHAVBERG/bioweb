@@ -1,4 +1,4 @@
-import AppBarComponet from "./componets/AppBar";
+// import AppBarComponet from "./componets/AppBar";
 import Home from "./componets/Home";
 import React from 'react'
 import { useEffect } from "react";
@@ -16,7 +16,6 @@ import {
   BrowserRouter,
   Routes, 
   Route,
-  Router,
 } from "react-router-dom";
 import OralCancer from "./componets/tests/OralCancer";
 import CapsuleEndocopyTest from "./componets/tests/CapsuleEndocopyTest";
@@ -28,8 +27,8 @@ function App() {
   useEffect(()=>{
     const fetchmodels = async()=>{
       const models = await fetch("https://farookheroes.pythonanywhere.com/models").then((respnse)=>respnse.json()).then((actualData)=> console.log(actualData));
+      console.log(models);
     }
-
     fetchmodels();
   
   },[]);
