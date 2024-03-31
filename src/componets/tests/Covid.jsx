@@ -59,7 +59,7 @@ const Covid = () => {
                         Covid
                     </Typography>
                     <Typography variant='p' sx={{}}>
-                        Upload you image of Cancer in a .jpg format
+                        Upload you image of Chest Xray in a .jpg format
                     </Typography>
                     <form onSubmit={handelSubmit} method="post">
 
