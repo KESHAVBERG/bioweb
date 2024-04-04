@@ -4,10 +4,12 @@ import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-const ListItemConponent = ({Disease}) => {
+const ListItemConponent = ({ Disease }) => {
   return (
-    <ListItem 
+
+    <ListItem
     >
+
       <ListItemText
         primary={
           <React.Fragment>
